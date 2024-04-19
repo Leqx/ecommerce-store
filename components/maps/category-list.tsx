@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Data from '@/shared/data';
 import Image from 'next/image';

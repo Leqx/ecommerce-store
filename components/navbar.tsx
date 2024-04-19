@@ -1,14 +1,16 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import MainNav from "@/components/main-nav";
-import Container from "@/components/ui/container";
-import NavbarActions from "@/components/navbar-actions";
-import getCategories from "@/actions/get-categories";
+import MainNav from '@/components/main-nav';
+import Container from '@/components/ui/container';
+import NavbarActions from '@/components/navbar-actions';
+import getCategories from '@/actions/get-categories';
 
 const Navbar = async () => {
   const categories = await getCategories();
 
-  return ( 
+  console.log(categories);
+
+  return (
     <div className="border-b">
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
@@ -22,5 +24,5 @@ const Navbar = async () => {
     </div>
   );
 };
- 
+
 export default Navbar;
